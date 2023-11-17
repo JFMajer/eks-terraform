@@ -81,8 +81,8 @@ resource "kubectl_manifest" "karpenter_provisioner" {
           values: ["eu-north-1a", "eu-north-1b", "eu-north-1c"]
       limits:
         resources:
-          cpu: "4000m"
-          memory: "32Gi"
+          cpu: "10000m"
+          memory: "128Gi"
       providerRef:
         name: default
       consolidation:

@@ -6,7 +6,7 @@ module "rds" {
   source  = "terraform-aws-modules/rds/aws"
   version = "~> 6.0"
 
-  identifier = "task-management"
+  identifier = "postgres-db"
 
   engine               = "postgres"
   engine_version       = "15"
@@ -16,7 +16,7 @@ module "rds" {
 
   allocated_storage = 20
 
-  db_name                     = "tasks"
+  db_name                     = "postgres-db"
   username                    = "postgres"
   password                    = var.db_password
   port                        = 5432
